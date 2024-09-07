@@ -1,0 +1,84 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+}
+footer {
+    background-color: #333;
+}
+/* Optional styling to improve the look of the header */
+.navbar-nav .nav-link {
+    margin-left: 15px;
+}
+
+.navbar-nav .dropdown-menu {
+    background-color: #343a40; /* Same as navbar background */
+    border: none;
+}
+
+.navbar-nav .dropdown-item {
+    color: white;
+}
+
+.navbar-nav .dropdown-item:hover {
+    background-color: #495057;
+}
+/* CSS to maintain aspect ratio and resize the images */
+#movieCarousel img {
+    width:cover;
+    max-height: 350px; /* Set maximum height */
+    margin: cover; /* Center the image */
+    display: cover;
+}
+#section-navigation {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 15px 0; /* Adjust padding for vertical size */
+}
+
+#section-navigation .nav-link {
+    color: black; /* Dark text color */
+    font-size: 18px; /* Adjust font size */
+    padding: 10px 15px; /* Adjust padding around links */
+}
+
+#section-navigation .nav-link:hover {
+    background-color: #007bff; /* Blue hover effect */
+    color: white; /* White text on hover */
+}
+#now-showing img {
+    width: cover; /* Make images responsive and take up full width of their container */
+    height: 300px; /* Set a fixed height if desired */
+    object-fit: cover; /* Ensures images fill the space without distortion */
+    display: cover;
+}   
+
+#coming-soon img {
+    width: cover; /* Make images responsive and take up full width of their container */
+    height: 300px; /* Set a fixed height if desired */
+    object-fit: cover; /* Ensures images fill the space without distortion */
+    display: cover;
+}  
+#now-showing h2 {
+    margin-right: 20px; /* Add some space between the heading and dropdowns */
+    font-size: 28px; /* Adjust font size for the heading */
+}
+
+.dropdown .btn {
+    background-color: #f8f9fa; /* Light color for dropdowns */
+    border: 1px solid #ddd; /* Border to differentiate */
+    color: #333; /* Text color */
+}
+
+.dropdown .btn:hover {
+    background-color: #e2e6ea; /* Hover effect */
+}
+/* Custom image size for Experiences section */
+.experience-img {
+    width: cover; /* Make sure the image takes up the full width of the column */
+    height: 250px; /* Set a specific height for the images */
+    object-fit: cover; /* Cover the entire area without distorting the image */
+    border-radius: 10px; /* Optional: Add some rounding to the edges */
+}
+.col-md-6 {
+    padding-left: 5px;  /* Reduce the space between the columns */
+    padding-right: 5px; /* Adjust as needed for your design */
+}

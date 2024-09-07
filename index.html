@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Booking - Clone</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Header Section -->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">KVR </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Left-side navigation links -->
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Show Time</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cinemas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Offers</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Gift Cards</a></li>
+                            <li><a class="dropdown-item" href="#">Experiences</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Search Form -->
+                <form class="d-flex me-3">
+                    <input class="form-control me-2" type="search" placeholder="Search Movies" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+
+                <!-- Location Select -->
+                <div class="dropdown me-3">
+                    <a class="btn btn-outline-light dropdown-toggle" href="#" role="button" id="locationDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        Select Location
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="locationDropdown">
+                        <li><a class="dropdown-item" href="#">New Delhi</a></li>
+                        <li><a class="dropdown-item" href="#">Mumbai</a></li>
+                        <li><a class="dropdown-item" href="#">Bangalore</a></li>
+                        <li><a class="dropdown-item" href="#">Hyderabad</a></li>
+                    </ul>
+                </div>
+
+                <!-- Login Button -->
+                <a href="#" class="btn btn-primary">Login</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Recommendation Section -->
+<section id="recommendations" class="py-0" style="padding: 0; margin: 0;">
+    <!--<div class="container"> -->
+        <div id="movieCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner">
+                <!-- Movie 1 -->
+                <div class="carousel-item active">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/et00403697-tcvjqfjuep-landscape.jpg" class="d-block w-100" alt="Movie 1">
+                    <div class="carousel-caption d-md-block">
+                        <a href="#" class="btn btn-warning">Book Ticket</a>
+                    </div>
+                </div>
+                
+                <!-- Movie 2 -->
+                <div class="carousel-item">
+                    <img src="https://www.infoflick.com/news_imgq/600x80/2024/04/download-greatest-of-all-time-goat-movie-hd-wallpapers-images-poster_61713027360.jpg" class="d-block w-100" alt="Movie 2">
+                    <div class="carousel-caption d-md-block">
+                        <a href="#" class="btn btn-warning">Book Ticket</a>
+                    </div>
+                </div>
+                <!-- Add more movies here -->
+            </div>
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#movieCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#movieCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Book Section -->
+<section id="quick-book" class="py-3" style="background: linear-gradient(to right, #f8c8dc, #fff);">
+    <div class="container">
+        <h2 class="text-left mb-4">Quick Book</h2>
+        <div class="row justify-content-left">
+            <!-- Movies and Cinemas Buttons -->
+            <div class="col-md-2">
+                <button class="btn btn-primary w-100 mb-3">Movies</button>
+                <!--<button class="btn btn-primary w-100 mb-3">Cinemas</button> -->
+            </div>
+            <!-- Select Movie, Timing, and Cinema Inputs -->
+            <div class="col-md-7">
+                <form class="row g-3">
+                    <div class="col-md-4">
+                        <select class="form-select" aria-label="Select Movie">
+                            <option selected>Select Movie</option>
+                            <option value="1">Movie 1</option>
+                            <option value="2">Movie 2</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-select" aria-label="Select Timing">
+                            <option selected>Select Timing</option>
+                            <option value="1">10:00 AM</option>
+                            <option value="2">1:00 PM</option>
+                        </select>
+                    </div>
+                    <!--############<div class="col-md-4">
+                        <select class="form-select" aria-label="Select Timing">
+                            <option selected>Select Timing</option>
+                            <option value="1">10:00 AM</option>
+                            <option value="2">1:00 PM</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-select" aria-label="Select Cinema">
+                            <option selected>Select Cinema</option>
+                            <option value="1">Cinema 1</option>
+                            <option value="2">Cinema 2</option>
+                        </select>
+                    </div>##############################-->
+                </form>
+            </div>
+            <!-- Book Now Button -->
+            <div class="col-md-2">
+                <button class="btn btn-warning w-100">Book Now</button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section Navigation Header -->
+<section id="section-navigation" class="py-3">
+    <div class="container">
+        <ul class="nav nav-pills justify-content-left">
+            <li class="nav-item">
+                <a class="nav-link" href="#now-showing">Now Showing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#coming-soon">Coming Soon</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#experiences">Experiences</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#trailers">Trailers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#offers">Offers</a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- 4DX and Playhouse Section -->
+<section id="special-features" class="py-3 text-left">
+    <div class="container">
+        <button class="btn btn-outline-primary mx-3">4DX</button>
+        <button class="btn btn-outline-primary mx-3">Playhouse</button>
+    </div>
+</section>
+
+<!-- Now Showing Section -->
+<section id="now-showing" class="py-3">
+    <div class="container">
+        <!-- Header for Now Showing Section -->
+        <div class="d-flex justify-content-between align-items-center">
+            <h2>Now Showing</h2>
+            <div class="d-flex">
+                <!-- All Genres Dropdown -->
+                <div class="dropdown me-3">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownGenres" data-bs-toggle="dropdown" aria-expanded="false">
+                        All Genres
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownGenres">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Drama</a></li>
+                        <li><a class="dropdown-item" href="#">Comedy</a></li>
+                        <!-- Add more genres as needed -->
+                    </ul>
+                </div>
+
+                <!-- All Languages Dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownLanguages" data-bs-toggle="dropdown" aria-expanded="false">
+                        All Languages
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownLanguages">
+                        <li><a class="dropdown-item" href="#">English</a></li>
+                        <li><a class="dropdown-item" href="#">Hindi</a></li>
+                        <li><a class="dropdown-item" href="#">Tamil</a></li>
+                        <!-- Add more languages as needed -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Movie Posters -->
+        <div class="row g-3">
+            <div class="col-md-3">
+                <img src="https://preview.redd.it/why-do-these-fan-made-posters-for-goat-look-better-than-the-v0-toiqourm533d1.jpg?width=1080&crop=smart&auto=webp&s=550fb38b17b94f52c63fd02f381ca323b87fa6fd" class="img-fluid" alt="Movie 2">
+                <h5>GOAT</h5>
+                <p>Tamil,Telugu</p>
+                <p>Action</p>
+                <a href="#" class="btn btn-warning">Book Now</a>
+                <a href="#" class="btn btn-outline-secondary">Details</a>
+            </div>
+            <div class="col-md-3">
+                <img src="https://m.media-amazon.com/images/M/MV5BNzFjOGI1MmEtZmYyNC00NTczLWE5ZjEtMjQ3ZDFiNGNmY2E5XkEyXkFqcGdeQXVyMTU4NDUzMjAx._V1_.jpg" class="img-fluid" alt="Movie 2">
+                <h5>Saripodha Sanivaram </h5>
+                <p>Telugu</p>
+                <p>Drama</p>
+                <a href="#" class="btn btn-warning">Book Now</a>
+                <a href="#" class="btn btn-outline-secondary">Details</a>
+            </div>
+            <div class="col-md-3">
+                <img src="https://upload.wikimedia.org/wikipedia/en/0/07/35_-_Chinna_Katha_Kaadu.jpg" class="img-fluid" alt="Movie 2">                        
+                <h5>35-Chinna Katha Kadhu</h5>
+                <p>Telugu</p>
+                <p>Family Drama/Comedy</p>
+                <a href="#" class="btn btn-warning">Book Now</a>
+                <a href="#" class="btn btn-outline-secondary">Details</a>
+            </div>  
+            <div class="col-md-3">
+                <img src="https://upload.wikimedia.org/wikipedia/en/4/4c/Deadpool_%26_Wolverine_poster.jpg" class="img-fluid" alt="Movie 2">
+                <h5>Deadpool & Wolverine</h5>
+                <p>English,Telugu</p>
+                <p>Action/Comedy</p>
+                <a href="#" class="btn btn-warning">Book Now</a>
+                <a href="#" class="btn btn-outline-secondary">Details</a>
+            </div>  
+            <div class="col-md-3">
+                <img src="https://www.cinejosh.com/newsimg/newsmainimg/committee-kurrollu_b_2007240930.jpg" class="img-fluid" alt="Movie 2">
+                <h5>Committee Kurrollu</h5>
+                <p>Telugu</p>
+                <p>Drama</p>
+                <a href="#" class="btn btn-warning">Book Now</a>
+                <a href="#" class="btn btn-outline-secondary">Details</a>
+            </div>  
+            <div class="col-md-3">
+                <img src="https://www.dreamworks.com/storage/cms-uploads/kung-fu-panda-4-he-poster.jpg" class="img-fluid" alt="Movie 2">
+                <h5>Kung Fu Panda 4</h5>
+                <p>Telugu,English</p>
+                <p>Comedy/Advanture</p>
+                <a href="#" class="btn btn-warning">Book Now</a>
+                <a href="#" class="btn btn-outline-secondary">Details</a>
+            </div> 
+            <div class="col-md-3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBoRdw0QrE2e-4hr6S0V-ViutfX_uUWh6TGw&s" class="img-fluid" alt="Movie 2">
+                <h5>Inside Out 2</h5>
+                <p>English</p>
+                <p>Comedy/Advanture</p>
+                <a href="#" class="btn btn-warning">Book Now</a>
+                <a href="#" class="btn btn-outline-secondary">Details</a>
+            </div> 
+            <div class="col-md-3">
+                <img src="https://m.media-amazon.com/images/M/MV5BNDE2OTQ0NjEtNmEwMC00NmRjLThiOGMtN2M1N2Q2YWY0NGY4XkEyXkFqcGc@._V1_.jpg" class="img-fluid" alt="Movie 2">
+                <h5>Strange Darling</h5>
+                <p>English</p>
+                <p>Horror</p>
+                <a href="#" class="btn btn-warning">Book Now</a>
+                <a href="#" class="btn btn-outline-secondary">Details</a>
+            </div>                
+            <!-- Repeat for other movies -->
+        </div>
+    </div>
+    </div>
+</section>
+
+
+<!-- Coming Soon Section -->
+<section id="coming-soon" class="py-3">
+    <div class="container">
+        <h2 class="text-left mb-4">Coming Soon </h2> <h5><a href="#" class="float-end">See All</a></h5>
+        <div class="row g-3">
+            <!-- Movie Poster 1 -->
+            <div class="col-md-4">
+                <img src="https://m.media-amazon.com/images/M/MV5BYmYyYzZkZTEtOGNjYy00ZWUyLWFiYzYtYjViMzU1ZDk4ODhiXkEyXkFqcGdeQXVyNzI4NjYyMzk@._V1_.jpg" class="img-fluid" alt="Movie 1">
+                <h5>Devara</h5>
+                <p>Telugu</p>
+                <p>Action</p>
+                <a href="#" class="btn btn-outline-secondary">Details</a>
+            </div>
+            <div class="col-md-4">
+                <img src="https://gallery.123telugu.com/content/slideshows/2024/8/Janaka-Aithe-Ganaka19/images/Janaka%20Aithe%20Ganaka.jpg" class="img-fluid" alt="Movie 1">
+                <h5>Janaka Aithe Ganaka</h5>
+                <p>Telugu</p>
+                <p>Drama</p>
+                <a href="#" class="btn btn-outline-secondary">Details</a>
+            </div>
+            <!-- Repeat for other movies -->
+        </div>
+    </div>
+</section>
+
+<!-- Experiences Section -->
+<section id="experiences" class="py-3">
+    <div class="container">
+        <h2 class="text-left mb-4">Experiences</h2>
+        <div class="row no-gutters">
+            <div class="col-md-6 p-0">
+                <img src="https://originserver-static1-uat.pvrcinemas.com/pvrcms/exp_sqr/4DX_ZriyhTHF.jpg" class="experience-img" alt="4DX Experience">
+            </div>
+            <div class="col-md-6">
+                <img src="https://originserver-static1-uat.pvrcinemas.com/pvrcms/exp_sqr/play-house_ivLFFglG.jpg" class="experience-img" alt="Playhouse Experience">
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 KVR. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
